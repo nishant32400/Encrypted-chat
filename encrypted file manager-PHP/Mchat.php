@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $mysqli = new mysqli("localhost", "username", "password", "chat_app");
 
-$receiver_id = 2; // Change as needed for testing
+$receiver_id = 2; 
 
 // Fetch messages
 $stmt = $mysqli->prepare("SELECT message, iv FROM messages WHERE (sender_id = ? AND receiver_id = ?) OR (sender_id = ? AND receiver_id = ?)");
